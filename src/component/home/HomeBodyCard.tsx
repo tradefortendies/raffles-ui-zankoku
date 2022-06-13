@@ -62,7 +62,7 @@ const StationContainer = styled.div`
   margin: 0 10px;
   background-image: url('/cardBg.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   text-align: center;
   position: relative;
 
@@ -173,10 +173,10 @@ const StationContainer = styled.div`
   }
 
   @media (max-width: 1200px) {
-    background-image: none;
-    background-color: #4b4867;
+    /* background-image: none; */
+    /* background-color: #4b4867; */
 
-    border: 8px solid #222034;
+    /* border: 8px solid #222034; */
     border-radius: 8px;
 
     width: 800px;
@@ -234,6 +234,7 @@ const StationContainer = styled.div`
 const PrizeContainer = styled.div`
   flex: 1 50%;
   margin: 0 10px;
+  text-align: center;
 
   img {
     border: 2px solid black;
