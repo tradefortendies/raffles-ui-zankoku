@@ -504,8 +504,8 @@ export default function HomeBodyCard({
   const claimPrize = async (i: number, winning: number) => {
     try {
       setTransactionOnGoing(true);
-      const prizeIndex = index;
-      const ticketIndex = winningTicketState;
+      const prizeIndex = i;
+      const ticketIndex = winning;
       await claimPrizeQuery(draffleClient, raffle, prizeIndex, ticketIndex);
       await sleep(500);
       updateCurrentRaffle();
