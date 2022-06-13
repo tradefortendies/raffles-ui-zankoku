@@ -595,7 +595,7 @@ export default function HomeBodyCard({
               ) : (
                 <p>Tickets: {entries}</p>
               )}
-              <p>Owned: 10</p>
+              {walletAddr && <p>Owned: {entrantEntries}</p>}
             </div>
             <div className='purchase-container'>
               <img
@@ -629,7 +629,7 @@ export default function HomeBodyCard({
         <StationContainer>
           <img src='/cardIcon.png' alt='Card Icon' className='card-icon' />
           <h1>Raffle Station</h1>
-          <div className='description-container'>
+          {raffle?.randomness && <div className='description-container'>
             <p>Winners</p>
             {raffle?.prizes?.map((data, i) => (
               <p>
@@ -638,20 +638,19 @@ export default function HomeBodyCard({
                 )}
               </p>
             ))}
-          </div>
+          </div>}
           <div>
             <p>Burned: {ticketPrice * entries} Junkz</p>
             <p>Tickets Sold: {entries}</p>
-            {raffle?.prizes?.map((data, i) => {
+            {raffle?.randomness && raffle?.prizes?.map((data, i) => {
               if ((entrant?.tickets || []).includes(winningTickets[i])) {
                 return (
-                  <button onClick={() => claimPrize(i, winningTickets[i])}>
                     <img
                       src='/claimButton.png'
                       alt='Claim Button'
                       className='claim-button'
+                      onClick={() => claimPrize(i, winningTickets[i])}
                     />
-                  </button>
                 );
               }
             })}
@@ -661,7 +660,7 @@ export default function HomeBodyCard({
         <PrizeContainer>
           <h3>Raffle Prize</h3>
           <div>
-            <img src='/nft_test.png' alt='NFT Raffled' />
+          <img src={image} alt='NFT Raffled' />
           </div>
           <div className='description-container ended'>
             <p>{description}</p>
