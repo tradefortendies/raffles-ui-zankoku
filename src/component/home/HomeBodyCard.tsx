@@ -472,11 +472,13 @@ export default function HomeBodyCard({
   }, [raffle, draffleClient.provider.wallet.publicKey]);
 
   const entrantEntries = useMemo(() => {
+	if (!draffleClient.provider.wallet.publicKey) return;
+
     const entrant = raffle?.entrants.get(
 		draffleClient.provider.wallet.publicKey.toString()
 	  );
 	  console.log('entrant', entrant);
-	  return entrant.tickets.length;
+	  return entrant?.tickets?.length;
   }, [raffle, draffleClient.provider.wallet.publicKey]);
   
 
@@ -595,7 +597,7 @@ export default function HomeBodyCard({
               ) : (
                 <p>Tickets: {entries}</p>
               )}
-              <p>Owned: {entrantEntries}</p>
+              <p>Owned: 10</p>
             </div>
             <div className='purchase-container'>
               <img
