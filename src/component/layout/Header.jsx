@@ -100,13 +100,15 @@ const useStyle = makeStyles((theme) =>
 );
 
 const ConnectButton = styled(WalletMultiButton)`
-	background: url('/connectWallet.png');
-	background-position: center !important;
+	/* background: url('/connectWallet.png'); */
+	/* background: url('/emptyConnectWallet.png'); */
+	background: ${props => `url('/${props.connected}.png')`};
+	background-position: 12px 5px !important;
 	background-repeat: no-repeat !important;
 	background-size: contain !important;
 	width: 360px;
 	height: 60px;
-	color: transparent;
+	/* color: transparent; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -154,7 +156,7 @@ export default function Header() {
 	return (
 		<Box className={classes.container}>
 			<Box className={classes.buttonContainer}>
-				<ConnectButton>
+				<ConnectButton connected={walletAddr ? "emptyConnectWallet" : "connectWallet" }>
 					{walletAddr ? `${walletAddr}` : ''}
 				</ConnectButton>
 			</Box>

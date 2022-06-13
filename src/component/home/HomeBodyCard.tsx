@@ -67,7 +67,7 @@ const StationContainer = styled.div`
   position: relative;
 
   width: 600px;
-  font-size: 20px;
+  font-size: 16px;
 
   padding: 48px;
 
@@ -582,10 +582,8 @@ export default function HomeBodyCard({
         <StationContainer>
           <img src='/cardIcon.png' alt='Card Icon' className='card-icon' />
           <h1>Raffle Station</h1>
-
-          {/* TODO God
-		  <h5>Ticket Sales Ends In:</h5>
-          <Countdown date={time} renderer={renderer} /> */}
+    		  <h5>Ticket Sales Ends In:</h5>
+          <Countdown date={time} renderer={renderer} />
           <div className='description-container'>
             <p>{description}</p>
           </div>
