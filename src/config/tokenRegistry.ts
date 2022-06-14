@@ -90,6 +90,17 @@ export const tokenRegistry = {
 		decimals: 0,
 		tags: ['social-token'],
 	},
+	AMzmwvDRKdt5AQ3m1m28tWjzBxmQNe1PsmHnYitVZwzp: {
+		"chainId": 101,
+		"address": "AMzmwvDRKdt5AQ3m1m28tWjzBxmQNe1PsmHnYitVZwzp",
+		"symbol": "JUNKz",
+		"name": "JUNK",
+		"decimals": 9,
+		"logoURI": "https://raw.githubusercontent.com/XAGBack/JUNKToken1/main/JunkToken.png",
+		"tags": [
+		  "utility-token"
+		]
+	  }
 };
 
 export const tokenInfoMap = new Map(Object.entries(tokenRegistry));
