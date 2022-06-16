@@ -1,4 +1,4 @@
-# CoC Raffles Frontend
+# Zankoku Raffles Frontend
 
 ## Adding a new raffle
 
