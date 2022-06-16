@@ -137,7 +137,7 @@ export default function BuyNowModal({
 					<span>
 						<img src={fire} alt="fire" />
 					</span>
-					<span>claim it u lucky cet!!!</span>
+					<span>claim it u lucky</span>
 				</>
 			);
 		} else {

@@ -157,7 +157,7 @@ export default function RaffleSectionA({
 			{/* info */}
 			<Typography className={classes.info}>
 				{cardFromProps.description ??
-					'Winner will recieve this degod! Good luck cets!'}
+					'Winner will recieve this degod! Good lucK!'}
 			</Typography>
 			{/* display */}
 			<Box className={classes.displayCont}>
